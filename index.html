@@ -4,6 +4,9 @@
     <head>
         <body style = "background-color:black;">
             <style>
+                html {
+                    scroll-behavior: smooth;
+                }
                 h1, p {
                     display:inline;
                     vertical-align:middle;
@@ -55,7 +58,7 @@
                     background:black;
                     position:fixed;
                     top:0;
-                    width:100%
+                    width:100%;
                 }
                 .NavBar a {
                     float:left;
@@ -80,7 +83,7 @@
                 <a href = "#Home" style = "font-family:BlinkMacSystemFont, 'Segoe UI'; font-size:20px; font-weight:1000; float:right; padding:14px 16px;">Home</a>
             </div>
             <nav>
-                <div class = "parallax" style = "width:100vw" id = Home>
+                <div class = "parallax" style = "width:100vw" id = "Home">
                     <div class = "centered">
                         <p style = " font-size:100px; font-weight:bold;">ILTStudios</p>
                         <p class = "bottomcentered" style = " font-size:25px;">Makes Cool Stuff</p>                
@@ -88,7 +91,7 @@
                 </div>
             </nav>
             <nav>
-                <div id = "Projects" style = "left:500px; background-image:url('5557995.jpg'); min-height:800px; background-attachment:fixed; background-position:center; background-repeat:no-repeat; background-size:cover;">
+                <div id  = "Projects" style = "left:500px; background-image:url('5557995.jpg'); min-height:800px; background-attachment:fixed; background-position:center; background-repeat:no-repeat; background-size:cover;">
                     <div>
                         <p style = " font-size:100px; font-weight:bold; position:absolute; top:1100px; left:50%; transform:translate(-50%, -50%);">Projects</p>
                         <p style = " font-size:25px; position:absolute; top:1250; left:50%; transform:translate(-50%, -50%);">The Stuff We Made</p>
@@ -97,21 +100,15 @@
             </nav>
             <nav>
                 <div class = "AboutUs" id = "AboutUs">
-                    <p style = "font-size:100px; font-weight:1000; position:absolute; top:1800px; left:25%; transform:translate(-50%, -50%);">About Me</p>
+                    <p style = "font-size:100px; font-weight:1000; position:absolute; top:1800px; left:25%; transform:translate(-50%, -50%);">About Us</p>
                     <p style = " font-size:25px; font-weight:750; position:absolute; top:1950; left:25%; transform:translate(-50%, -50%);">Idk, I Just Make Stupid Coding Projects And Stuff uhh :]</p>
                 </div>
             </nav>
             <script>
-                var navHeight = $('nav').outerHeight();
-                if ('nav' == 'Home') {
-                    navHeight += 200;
+                function ScrollTo(self){
+                    var Element = self.getBoundingClientRect();
+                    window.scrollTo(Element.x, ELement.y)
                 }
-                $('nav a').click(function( e ){
-                    e.preventDefault();
-                    var myHref = $(this).attr('href');
-                    var newPos = $(myHref).offset().top;
-                    $('html, body').stop().animate({scrollTop: newPos+navHeight}, 1300);
-                });
             </script>
         </body>
     </head>
