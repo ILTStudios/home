@@ -57,6 +57,7 @@
            background-repeat: no-repeat;
            height: 800px;
            margin-top: 50px;
+           align-items: center;
         }
         .MenuButton
         {
@@ -135,13 +136,83 @@
             font-family: 'Oswald', sans-serif;
             color: #929292;
             display: block;
-            transition: 0.3s;
+            transition: 0.25s;
         }
         .NavSlide a:hover 
         {
             color:rgb(139, 74, 0);
             text-shadow: 2px 2px 1px whitesmoke;
         }
+        .Header
+        {
+            font-family: 'Oswald', sans-serif;
+            font-size: 80px;
+            font-weight: 700;
+            text-align:center; 
+            vertical-align: middle;
+            top: 30%;
+            display: inline-block;
+        }
+        span span
+        {
+            position: relative;
+            animation: move-text-color 1s;
+            bottom: -1em;
+            animation-iteration-count: infinite;
+        }
+        @keyframes move-text-color 
+        {
+            0% 
+        {
+            bottom: -0.2em;
+            color: #3E5C76;
+        }
+            25%
+        {
+            bottom: 0em;
+            color:white
+        }
+            50% 
+        {
+            bottom: -0.2em;
+            color: rgb(139, 74, 0);;
+        }
+            100% 
+        {
+            bottom: -0.2em;
+            color: rgb(139, 74, 0);
+        }
+    }
+                #I_2 {
+                animation-delay: 0s;
+                }
+                #L {
+                animation-delay: 0.05s;
+                }
+                #T_2 {
+                animation-delay: 0.1s;
+                }
+                #S_2{
+                animation-delay: 0.15s;
+                }
+                #t {
+                animation-delay: 0.2s;
+                }
+                #u {
+                animation-delay: 0.25s;
+                }
+                #d {
+                animation-delay: 0.3s;
+                }
+                #i {
+                animation-delay: 0.35s;
+                }
+                #o {
+                animation-delay: 0.4s;
+                }
+                #s {
+                animation-delay: 0.45s;
+                }
     </style>
     <body style = "background-color:black;">
         <div class = "NavSlide" id = "MenuSlide">
@@ -159,8 +230,19 @@
         </div>
         <div id = "MainScreen" class = "MainScreen">
             <div id = "MSImage">
-                <div id = "MSText" style = "height: 100px;">
-                    <p style = "font-size:100px; margin-left:35%; font-weight:150; color:white; margin-top: 0%;">ILTStudios</p>
+                <div id = "MSText" style = "height: 800px;">
+                    <span class = "Header" style = "margin-left:30%; color: whitesmoke; text-shadow: 2px 2px 2px grey;">
+                        <span id = "I_2">I</span>
+                        <span id = "L">L</span>
+                        <span id = "T_2">T</span>
+                        <span id = "S_2">S</span>
+                        <span id = "t">t</span>
+                        <span id = "u">u</span>
+                        <span id = "d">d</span>
+                        <span id = "i">i</span>
+                        <span id = "o">o</span>
+                        <span id = "S">s</span>
+                    </span>
                 </div>
             </div>
         </div>
