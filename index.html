@@ -5,215 +5,8 @@
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200;300;400;500;600;700&display=swap" rel="stylesheet">
+        <link rel = "stylesheet" href = "MainWebsite.css">
     </head>
-    <style>
-        html
-        {
-            scroll-behavior:smooth;
-        }
-        p
-        {
-            display:flex;
-            font-family:'BlinkMacSystemFont', 'Segoe UI';
-            font-weight:500;
-        }
-        .SideBySide { 
-            background-color:aliceblue;
-            width:100%; 
-            display:inline-block; 
-            height:800px; 
-        }
-        .Left
-        {
-            display:table-cell; 
-            vertical-align:middle; 
-            width:65%;  
-            float:left;  
-            height:800px; 
-            background-image:url('Images/Logo.JPG'); 
-        }
-        .Right
-        {
-            display:table-cell; 
-            vertical-align:middle; 
-            width:35%; 
-            float:left;
-            height: 800px;
-        }
-        .HomeSubDiv
-        {
-            background-color:aliceblue;
-            height:0px;
-            transition:0.5s;
-            text-decoration: none;
-            overflow-x:hidden;
-            z-index:1;
-        }
-        .MainScreen
-        {
-           background-image: url("Images/CodingImage.jpg");
-           background-attachment: fixed;
-           background-size: cover; 
-           background-repeat: no-repeat;
-           height: 800px;
-           margin-top: 50px;
-           align-items: center;
-        }
-        .MenuButton
-        {
-            position: relative;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            width: 80px;
-            height: 80px;
-            cursor: pointer;
-            transition: all .5s ease-in-out;
-            margin-left: 75px;
-            margin-top: -3px;
-        }
-        .MenuButtonBurger
-        {
-            width: 30px;
-            height: 4px;
-            background: black;
-            border-radius: 5px;
-            box-shadow: 0 2px 10px grey;
-            transition: all .5s ease-in-out;
-        }
-        .MenuButtonBurger::after,
-        .MenuButtonBurger::before
-        {
-            content: '';
-            position: absolute;
-            width: 30px;
-            height: 4px;
-            background: black;
-            border-radius: 5px;
-            box-shadow: 0 2px 10px grey;
-            transition: all .5s ease-in-out
-        }
-        .MenuButtonBurger::before
-        {
-            transform: translateY(-10px);
-        }
-        .MenuButtonBurger::after
-        {
-            transform: translateY(10px)
-        }
-        .MenuButton.open .MenuButtonBurger{
-            transform: translateX(-50px);
-            background: transparent;
-            box-shadow: none;
-        }
-        .MenuButton.open .MenuButtonBurger::after{
-            transform: rotate(45deg) translate(35px, -35px);
-            background:rgb(139, 74, 0);
-        }
-        .MenuButton.open .MenuButtonBurger::before{
-            transform: rotate(-45deg) translate(35px, 35px);
-            background:rgb(139, 74, 0);
-        }
-        .NavSlide
-        {
-            height:100%;
-            width:100%;
-            position:fixed;
-            top:0;
-            right:0;
-            background-color:black;
-            overflow-x:hidden;
-            padding-top:150px;
-            transition:all 0.5s ease-in-out;
-            opacity:0;
-        }
-        .NavSlide a 
-        {
-            padding: 16px 8px 8px 0%;
-            text-decoration: none;
-            text-align: center;
-            font-size: 60px;
-            font-family: 'Oswald', sans-serif;
-            color: #929292;
-            display: block;
-            transition: 0.25s;
-        }
-        .NavSlide a:hover 
-        {
-            color:rgb(139, 74, 0);
-            text-shadow: 2px 2px 1px whitesmoke;
-        }
-        .Header
-        {
-            font-family: 'Oswald', sans-serif;
-            font-size: 80px;
-            font-weight: 700;
-            text-align:center; 
-            vertical-align: middle;
-            top: 30%;
-            display: inline-block;
-        }
-        span span
-        {
-            position: relative;
-            animation: move-text-color 1s;
-            bottom: -1em;
-            animation-iteration-count: infinite;
-        }
-        @keyframes move-text-color 
-        {
-            0% 
-        {
-            bottom: -0.2em;
-            color: #3E5C76;
-        }
-            25%
-        {
-            bottom: 0em;
-            color:white
-        }
-            50% 
-        {
-            bottom: -0.2em;
-            color: rgb(139, 74, 0);;
-        }
-            100% 
-        {
-            bottom: -0.2em;
-            color: rgb(139, 74, 0);
-        }
-    }
-                #I_2 {
-                animation-delay: 0s;
-                }
-                #L {
-                animation-delay: 0.05s;
-                }
-                #T_2 {
-                animation-delay: 0.1s;
-                }
-                #S_2{
-                animation-delay: 0.15s;
-                }
-                #t {
-                animation-delay: 0.2s;
-                }
-                #u {
-                animation-delay: 0.25s;
-                }
-                #d {
-                animation-delay: 0.3s;
-                }
-                #i {
-                animation-delay: 0.35s;
-                }
-                #o {
-                animation-delay: 0.4s;
-                }
-                #s {
-                animation-delay: 0.45s;
-                }
-    </style>
     <body style = "background-color:black;">
         <div class = "NavSlide" id = "MenuSlide">
             <a onclick = "RemoveMenuSlide()" href = "#MainScreen">MainScreen</a>
@@ -224,7 +17,7 @@
         </div>
         <div  style = "top:0px; position:fixed; height:75px; width:100%; background-color: white; background-attachment: fixed; background-size: cover; background-repeat: no-repeat;">
             <img  src = "Images/LogoSmall.jpg" style = "position:fixed; height: 55px; width: 50px; top:8px; float: left; margin-left:15px; margin-right: 15px;">
-            <div class = "MenuButton" onclick = "MenuAnim()">
+            <div class = "MenuButton">
                 <div class = "MenuButtonBurger"></div>
             </div>
         </div>
@@ -232,6 +25,7 @@
             <div id = "MSImage">
                 <div id = "MSText" style = "height: 800px;">
                     <span class = "Header" style = "margin-left:30%; color: whitesmoke; text-shadow: 2px 2px 2px grey;">
+                        <p class = "MainHeaderSub">- We make Cool Stuff... sometimes :3</p>
                         <span id = "I_2">I</span>
                         <span id = "L">L</span>
                         <span id = "T_2">T</span>
@@ -246,49 +40,9 @@
                 </div>
             </div>
         </div>
-        <div class = "SideBySide" id = "Home" onclick = "DoPopupSubDiv('HomeSubDiv')"> 
-            <div class = "Left"></div>
-            <div class = "Right" style = "background-color:aliceblue;">
-                <div style = "border: orange; border-width: 75px; border-style: solid; color: black; height:650px">
-                    <p style = "font-size:30px; margin-top:0px; margin-bottom:0px; background-color: black; color:white; font-weight: 10; font-family: 'Courier New', Courier, monospace;">- I Dont Know I Make Some Cool Stuff And I Code Things <br> - I Code In HTML, C#, C++, Python, And Javascript</p>
-                </div>
-            </div>
+        <div class = "ContentMain">
+            <p class = "ContentMainPara">Projects</p>
         </div>
-        <div id = "HomeSubDiv" class = "HomeSubDiv">
-            <p>Pee Pee Poo Poo Check</p>
-        </div>
+        <script src = "MainWebsite.js"></script>
     </body>
-    <script>
-        function RemoveMenuSlide()
-        {
-            document.getElementById("MenuSlide").style.opacity = 0;
-            MenuBtn.classList.remove('open');
-            document.getElementById("MenuSlide").style.opacity = 0;
-            MenuOpen = false;
-        }
-        const MenuBtn = document.querySelector('.MenuButton');
-        let MenuOpen = false;
-        MenuBtn.addEventListener('click', () => {
-            if (MenuOpen == false){
-                MenuBtn.classList.add('open');
-                document.getElementById("MenuSlide").style.opacity = 0.8;
-                MenuOpen = true;
-            }else {
-                MenuBtn.classList.remove('open');
-                document.getElementById("MenuSlide").style.opacity = 0;
-                MenuOpen = false;
-            }
-        })
-        function DoPopupSubDiv(Elmt)
-        {
-            if (document.getElementById(Elmt).style.height <= "0px") 
-            {
-                document.getElementById(Elmt).style.height = "200px";
-            }
-            else
-            {
-                document.getElementById(Elmt).style.height = "0px";
-            }
-        }
-    </script>
 </html>

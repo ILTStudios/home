@@ -1,0 +1,247 @@
+html
+{
+    scroll-behavior:smooth;
+}
+p
+{
+    display:flex;
+    font-family: 'Oswald', sans-serif;
+    font-weight:500;
+}
+
+
+
+.NavSlide
+{
+    height:100%;
+    width:100%;
+    position:fixed;
+    top:0;
+    right:0;
+    background-color:black;
+    overflow-x:hidden;
+    padding-top:150px;
+    transition:all 0.5s ease-in-out;
+    opacity:0;
+}
+.NavSlide a 
+{
+    padding: 16px 8px 8px 0%;
+    text-decoration: none;
+    text-align: center;
+    font-size: 60px;
+    font-family: 'Oswald', sans-serif;
+    color: #929292;
+    display: block;
+    transition: 0.25s;
+}
+.NavSlide a:hover 
+{
+    color:rgb(139, 74, 0);
+    text-shadow: 2px 2px 1px whitesmoke;
+}
+
+
+
+.MenuButton
+{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 80px;
+    height: 80px;
+    cursor: pointer;
+    transition: all .5s ease-in-out;
+    margin-left: 75px;
+    margin-top: -3px;
+}.MenuButtonBurger
+{
+    width: 30px;
+    height: 4px;
+    background: black;
+    border-radius: 5px;
+    transition: all .5s ease-in-out;
+}
+.MenuButtonBurger::after,
+.MenuButtonBurger::before
+{
+    content: '';
+    position: absolute;
+    width: 30px;
+    height: 4px;
+    background: black;
+    border-radius: 5px;
+    transition: all .5s ease-in-out
+}
+.MenuButtonBurger::before
+{
+    transform: translateY(-10px);
+}
+.MenuButtonBurger::after
+{
+    transform: translateY(10px)
+}
+.MenuButton.open .MenuButtonBurger{
+    transform: translateX(-50px);
+    background: transparent;
+    box-shadow: none;
+}
+.MenuButton.open .MenuButtonBurger::after{
+    transform: rotate(45deg) translate(35px, -35px);
+    background:rgb(139, 74, 0);
+}
+.MenuButton.open .MenuButtonBurger::before{
+    transform: rotate(-45deg) translate(35px, 35px);
+    background:rgb(139, 74, 0);
+}
+
+
+
+.MainScreen
+{
+   background-image: url("Images/Space.jpg");
+   background-attachment: fixed;
+   background-size: cover; 
+   background-repeat: no-repeat;
+   height: 800px;
+   margin-top: 50px;
+   align-items: center;
+}
+.Header
+{
+    font-family: 'Oswald', sans-serif;
+    font-size: 0px;
+    font-weight: 700;
+    float: left;
+    top: 10%;
+    left: 10px;
+    position: absolute;
+}
+span span
+{
+    font-size: 80px;
+    position: relative;
+    animation: move-text-color 8s;
+    bottom: -1em;
+    animation-iteration-count: infinite;
+}
+@keyframes move-text-color 
+{
+    0% 
+{
+    bottom: -1em;
+    color: rgb(139, 74, 0);
+}
+    5%
+{
+    bottom: -0.7em;
+    color: #3E5C76;
+}
+    10%
+{
+    bottom: -1em;
+    color: white;
+}
+    75%
+{
+    bottom: -1em;
+    color: white;
+}
+    100% 
+{
+    bottom: -1em;
+    color: white;
+}
+}
+    #I_2 {
+    animation-delay: 0s;
+    }
+    #L {
+    animation-delay: 0.05s;
+    }
+    #T_2 {
+    animation-delay: 0.1s;
+    }
+    #S_2{
+    animation-delay: 0.15s;
+    }
+    #t {
+    animation-delay: 0.2s;
+    }
+    #u {
+    animation-delay: 0.25s;
+    }
+    #d {
+    animation-delay: 0.3s;
+    }
+    #i {
+    animation-delay: 0.35s;
+    }
+    #o {
+    animation-delay: 0.4s;
+    }
+    #s {
+    animation-delay: 0.45s;
+    }
+.MainHeaderSub
+{
+    font-size: 25px;
+    margin-right: 45%;
+    height: 50px;
+    margin-top: 200px;
+    color: white;
+    text-align: left;
+}
+
+
+.SideBySide { 
+    background-color:aliceblue;
+    width:100%; 
+    display:inline-block; 
+    height:800px; 
+}
+.Left
+{
+    display:table-cell; 
+    vertical-align:middle; 
+    width:65%;  
+    float:left;  
+    height:800px; 
+    background-image:url('Images/Logo.JPG'); 
+}
+.Right
+{
+    display:table-cell; 
+    vertical-align:middle; 
+    width:35%; 
+    float:left;
+    height: 800px;
+}
+
+
+.HomeSubDiv
+{
+    background-color:aliceblue;
+    height:0px;
+    transition:0.5s;
+    text-decoration: none;
+    overflow-x:hidden;
+    z-index:1;
+}
+
+
+.ContentMain
+{
+    height: 150px;
+    width: 100%;
+    background-color: rgb(139, 74, 0);
+    align-items: center;
+}
+.ContentMainPara
+{
+    font-size: 50px;
+    text-align: center;
+    margin-left: 35%;
+    color: white;
+}
